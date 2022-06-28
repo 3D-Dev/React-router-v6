@@ -1,8 +1,10 @@
 import { UserItem } from "../users/userItem";
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function UserDetail(props) {
-  const location = useLocation()
+  const location = useLocation();
+  let navigate = useNavigate();
+
   return (
     <>
       <UserItem item={location.state} />
