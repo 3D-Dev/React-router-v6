@@ -2,25 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
-
-.parent {
-  margin: 50px auto 0 auto;
-  width: 400px;
-  height: 120px;
-}
-
 .name {
   color: red;
-  margin: 50px 0;
-  text-align: left;
 }
 .email {
   color: blue;
-  margin: 50px 0;
-  text-align: left;
 }
 .intro {
   color: green;
-  margin: 50px 0;
-  text-align: left;
 }

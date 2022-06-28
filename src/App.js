@@ -1,27 +1,17 @@
-import React from "react";
-//import TableComponent from "./components/TableComponent";
-import { Routes, Route } from "react-router-dom"
-import Home from "./pages/home"
-import Eliseo from "./pages/eliseo"
-import Hayden from "./pages/hayden"
-import Nikita from "./pages/nikita"
-import Lew from "./pages/lew"
-import Jayne from "./pages/jayne"
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Users } from "./component/users/users";
+import { UserDetail } from "./component/userDetail/userDetail";
+import "./styles.css";
+
+export default function App() {
   return (
     <div className="App">
-      <div className="container">
-      <Routes>
-        <Route path="/" element={ <Home/> } />
-        <Route path="lew" element={ <Lew/> } />
-        <Route path="eliseo" element={ <Eliseo/> } />
-        <Route path="nikita" element={ <Nikita/> } />
-        <Route path="jayne" element={ <Jayne/> } />
-        <Route path="hayden" element={ <Hayden/> } />
-      </Routes>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Users />} />
+          <Route path="/detail/:id" exact element={<UserDetail />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
